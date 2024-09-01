@@ -46,7 +46,7 @@ export default function Home() {
               <Button shape="round" onClick={generate}>Nettoyer</Button>
             :
               <>
-                <Progress type="dashboard" format={() => currentStep + "/" + nbr} percent={(currentStep/nbr)*100} />
+                <Progress type="dashboard" format={() => String(currentStep).padStart(2, '0') + "/" + nbr} percent={(currentStep/nbr)*100} />
                 <div className="fw-bold">{ currentToken }</div>
               </>
           }
